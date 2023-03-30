@@ -31,8 +31,7 @@ public class ExcluirPessoa {
 				stmt.close();
 				stmt = conexao.prepareStatement(delete);
 				stmt.setInt(1, codigo);
-				stmt.execute();
-				System.out.println("Pessoa foi excluida!");
+				if (stmt.executeUpdate() > 0 )	System.out.println("Pessoa foi excluida!");
 			}
 			
 			stmt.close();
