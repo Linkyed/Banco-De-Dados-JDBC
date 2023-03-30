@@ -6,4 +6,5 @@
  *
  */
 module BancoDeDadosJDBC {
+	requires java.sql;
 }
